@@ -3,12 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build && npm run copy",
+    "build": "nuxt build && npm run copyfile",
     "dev": "nuxt dev",
+    "start:pm2": "pm2 start ecosystem.config.cjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "copy": "copyfiles ecosystem.config.js .env package.json package-lock.json .output"
+    "copyfile": "copyfiles ecosystem.config.cjs .env package.json package-lock.json .output"
   },
   "dependencies": {
     "nuxt": "^3.17.6",
